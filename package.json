@@ -3,7 +3,8 @@
   "scripts": {
     "test": "ts-node src/index.ts",
     "serve": "webpack serve --progress",
-    "release": "webpack --progress --mode=production"
+    "release": "rm -rf docs && webpack --progress --mode=production",
+    "build": "rm -rf docs && webpack --progress --mode=development"
   },
   "dependencies": {
     "@rc-ex/core": "^0.10.4"
