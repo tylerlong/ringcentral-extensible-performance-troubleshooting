@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@rc-ex/core": "^0.10.4",
+    "@rc-ex/debug": "^0.8.1",
     "@rc-ex/rcsdk": "^0.8.3",
     "@ringcentral/sdk": "^4.6.1"
   },
