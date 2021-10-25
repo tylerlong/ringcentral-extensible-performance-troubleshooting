@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
-    "test": "ts-node src/index.ts",
+    "test": "ts-node -r dotenv-override-true/config src/index.ts",
     "serve": "webpack serve --progress",
     "release": "rm -rf docs && webpack --progress --mode=production",
     "build": "rm -rf docs && webpack --progress --mode=development"
@@ -10,6 +10,7 @@
     "@rc-ex/core": "^0.10.4",
     "@rc-ex/debug": "^0.8.1",
     "@rc-ex/rcsdk": "^0.8.3",
+    "@rc-ex/ws": "^0.13.0",
     "@ringcentral/sdk": "^4.6.1"
   },
   "devDependencies": {
