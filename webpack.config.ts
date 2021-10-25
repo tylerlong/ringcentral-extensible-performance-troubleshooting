@@ -3,11 +3,15 @@ import {Configuration} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import dotenv from 'dotenv-override-true';
 import {DefinePlugin} from 'webpack';
+import path from 'path';
 
 const config: Configuration = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/index.ts',
+  output: {
+    path: path.join(__dirname, 'docs'),
+  },
   module: {
     rules: [
       {
