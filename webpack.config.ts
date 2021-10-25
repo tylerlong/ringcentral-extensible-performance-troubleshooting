@@ -1,3 +1,4 @@
+/* eslint-disable node/no-unpublished-require */
 /* eslint-disable node/no-unpublished-import */
 import {Configuration} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -31,6 +32,13 @@ const config: Configuration = {
       'process.env': JSON.stringify(dotenv.config().parsed),
     }),
   ],
+  resolve: {
+    fallback: {
+      crypto: require.resolve('crypto-browserify'),
+      buffer: require.resolve('buffer/'),
+      stream: require.resolve('stream-browserify'),
+    },
+  },
 };
 
 export default config;
